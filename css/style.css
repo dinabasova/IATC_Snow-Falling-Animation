@@ -1,0 +1,73 @@
+*, *:after,*:before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background: #fff;
+    color: #000;
+}
+
+.snow_wrap{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../image/1386792659_zimnie-peyzazhi-5.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+    overflow: hidden;
+}
+.snow, .snow:after, .snow:before{
+    content: ' ';
+    position: absolute;
+    top: -650px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+    radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent),
+    radial-gradient(3px 3px at 300px 250px, #fff, transparent),
+    radial-gradient(4px 4px at 400px 350px, #fff, transparent),
+    radial-gradient(6px 6px at 500px 75px, #fff, transparent),
+    radial-gradient(3px 3px at 600px 125px, #fff, transparent),
+    radial-gradient(4px 4px at 700px 175px, #fff, transparent),
+    radial-gradient(6px 6px at 800px 225px, #fff, transparent),
+    radial-gradient(3px 3px at 900px 100px, #fff, transparent),
+    radial-gradient(4px 4px at 1000px 200px, #fff, transparent),
+    radial-gradient(6px 6px at 1100px 300px, #fff, transparent),
+    radial-gradient(3px 3px at 1200px 400px, #fff, transparent),
+    radial-gradient(4px 4px at 1300px 500px, #fff, transparent); 
+    background-size: 650px 650px;
+    animation: snowAnim 3s linear infinite;
+}
+
+.snow:after{
+    margin-left: -250px;
+    opacity: 0.5;
+    filter: blur(2px);
+    animation-direction: reverse;
+    animation-duration: 6s;
+}
+
+.snow:before{
+    margin-left: -250px;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation-direction: reverse;
+    animation-duration: 9s;
+}
+
+@keyframes snowAnim{
+    from{
+        transform: translateY(0);
+    }
+    TO{
+        transform: translateY(650px);
+    }
+}
